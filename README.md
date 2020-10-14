@@ -50,7 +50,7 @@ as well as the constructors needed to convert the linear input string into a cir
 You will also need to complete the `Nucleotide` class (this is your linked list node) which will contain a constructor as well as 
 the recursive `match` method. 
 
-**No additional methods are needed (none should be added), do not change the signatures given.**
+**No additional methods are needed (none should be added other than possibly unit test methods in `tester.java`), do not change the signatures given.**
 
 ### `CircularGenome`
 This class will contain private pointer to two `Nucleotide` objects: `head` and `tail`.
