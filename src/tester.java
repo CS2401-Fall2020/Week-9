@@ -3,7 +3,6 @@ public class tester {
     
     /*
      * Example from README (see text for description)
-     *
      */
     CircularGenome banana = new CircularGenome("banana");
     
