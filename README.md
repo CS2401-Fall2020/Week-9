@@ -50,4 +50,56 @@ as well as the constructors needed to convert the linear input string into a cir
 You will also need to complete the `Nucleotide` class (this is your linked list node) which will contain a constructor as well as 
 the recursive `match` method. 
 
+### `CircularGenome`
+This class will contain a pointer to two `Nucleotide` objects: `head` and `tail`.
+No other class variables should be defined. 
+The linked list will be circular meaning it will always be true (once constructed) that `tail.next == head`. 
 
+#### Constructor
+The only constructor will take as input a single String. 
+It will first confirm (or transform) the string is all uppercase letters. 
+It will then build the circular linked list by creating nodes from the single characters in the list. 
+
+#### `public String toString()`
+This method will define a method that reconstructs the un-circularized genome by traversing the linked list and returns it. 
+
+#### `public String search(String)`
+This method takes as input a search String, and returns a string either containing the locations or that no matches are found. 
+The formatting for these strings is shown in the examples above. 
+
+To accomplish this, this method will call `.match(String)` with the input string (converted so that the search ignores the case) 
+on each starting position in the genome (each node in the linked list). 
+Each call will return a boolean which will be used to construct the return string. 
+
+### `Nucleotide`
+Each instance of `Nucleotide` will contain a single *private* `char` and a `next` pointer to another instance of `Nucleotide`. 
+
+#### Constructor
+The constructor will take in a single `char` and assign it to the stored value. 
+
+#### `public char getChar()`
+Returns the character stored at this node (it is private so it can't be accessed in other contexts).
+
+#### `public boolean match(String)`
+This *recursive* method will return true when the given string starts at this node. 
+It will do this by: 
+1. checking if the first character of the input matches this instances' `char`, and 
+1. checking if all but the first character matches the genome stating at the `next` node. 
+
+If both of these is satisfied, return `True` otherwise return `False`. 
+
+### `Tester`
+
+In this method you will provide at least 10 unit tests with descriptions confirming that the implementations of the two classes defined are correct. 
+
+## Grading 
+160 points
+`CircularGenome` 80 pts.
+* constructor 20 pts.
+* `toString` 20 pts. 
+* `search` 40 pts. 
+`Nucleotide` 60 pts. 
+* constuctor 10 pts. 
+* `getChar` 10 pts. 
+* `match` 40 pts. 
+`tester` 20 pts. (2 points each unit test)
