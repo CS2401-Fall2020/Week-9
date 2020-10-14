@@ -50,8 +50,10 @@ as well as the constructors needed to convert the linear input string into a cir
 You will also need to complete the `Nucleotide` class (this is your linked list node) which will contain a constructor as well as 
 the recursive `match` method. 
 
+**No additional methods are needed (none should be added), do not change the signatures given.**
+
 ### `CircularGenome`
-This class will contain a pointer to two `Nucleotide` objects: `head` and `tail`.
+This class will contain private pointer to two `Nucleotide` objects: `head` and `tail`.
 No other class variables should be defined. 
 The linked list will be circular meaning it will always be true (once constructed) that `tail.next == head`. 
 
@@ -93,13 +95,16 @@ If both of these is satisfied, return `True` otherwise return `False`.
 In this method you will provide at least 10 unit tests with descriptions confirming that the implementations of the two classes defined are correct. 
 
 ## Grading 
-160 points
+160 points total
+
 `CircularGenome` 80 pts.
 * constructor 20 pts.
 * `toString` 20 pts. 
 * `search` 40 pts. 
+
 `Nucleotide` 60 pts. 
 * constuctor 10 pts. 
 * `getChar` 10 pts. 
-* `match` 40 pts. 
+* `match` 40 pts.
+
 `tester` 20 pts. (2 points each unit test)
